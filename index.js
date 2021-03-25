@@ -20,6 +20,7 @@ app.listen(config.port, () => {
 
 app.use(cors())
 app.use(bodyParser.json());
+app.use(express.static('public'));
 
 app.use('/signup', signUpRoutes)
 app.use('/login', loginRoutes)
